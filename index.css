@@ -1,19 +1,4 @@
-#bt_1{
-    width: 100px;
-    display: none;
-}
-#bt_10{
-    width: 100px;
-    display: none;
 
-}#bt_100{
-    width: 100px;
-    display: none;
-}
-.bt{
-    width: 100px;
-    display: none;
-}
 #affich_result{
     display: flex;
     align-items: center;
@@ -26,6 +11,21 @@
     color: white;
     cursor: pointer;
 }
-#affich_result:hover{
-    box-shadow: 0px 0px 11px #00ddff;
+.bt{
+    width: 200px;
+    display: none;
+    transition: 1s;
+    /* display: none; */
+}
+#div_bt_click{
+    display: flex;
+flex-direction: column;
+}
+#div_bt_cps{
+    display: flex;
+    flex-direction: column;
+
+}
+#div_bt{
+    display: flex;
 }

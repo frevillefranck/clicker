@@ -8,14 +8,33 @@
   </head>
   <body>
     <div id="affich_result">0</div>
-    <button class="bt" id="bt_1">Click +1</button>
-    <button class="bt" id="bt_cps_1">CPS + 1</button>
-    <button class="bt" id="bt_10">Click +10</button>
-    <button class="bt" id="bt_100">Click +100</button>
+    <p id="total_click">Montant Click : 1</p>
+    <p id="total_cps">Montant CPS : 0</p>
+    <div id="div_bt">
+      <div id="div_bt_click">
+        <button class="bt" id="bt_1">
+          Click +1 ( x 0). Coût du prochain niveau : 2
+        </button>
+        <button class="bt" id="bt_10">
+          Click +10 ( x 0). Coût du prochain niveau : 20
+        </button>
+        <button class="bt" id="bt_100">
+          Click +100 ( x 0). Coût du prochain niveau : 200
+        </button>
+      </div>
+      <div id="div_bt_cps">
+        <button class="bt" id="bt_cps_1">
+          CPS +1 ( x 0). Coût du prochain niveau : 10
+        </button>
+        <button class="bt" id="bt_cps_10">
+          CPS +10 ( x 0). Coût du prochain niveau : 100
+        </button>
+        <button class="bt" id="bt_cps_100">
+          CPS +100 ( x 0). Coût du prochain niveau : 1000
+        </button>
+      </div>
+    </div>
     <button class="bt" id="bt_reset">reset</button>
-    <script>
-      setInterval(console.log('Test'), 1000);
-    </script>
     <script src="index.js"></script>
   </body>
 </html>

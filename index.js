@@ -51,7 +51,6 @@ bt_100.addEventListener("click", () => AjoutClick100())
 bt_cps_1.addEventListener("click", () => CPS1())
 bt_cps_10.addEventListener("click", () => CPS10())
 bt_cps_100.addEventListener("click", () => CPS100())
-bt_reset.addEventListener("click", () => Reset())
 affich_result.addEventListener('click', () => ClickDiv())
 
 //FONCTIONS
@@ -73,12 +72,12 @@ setInterval(function () {
     compteur = compteur + cps;
 
 }, 1000)
-function Reset() {
-    click = 0;
-    cps = 0;
-    compteur = 0;
-    affich_result.textContent = compteur;
-}
+// function Reset() {
+//     click = 0;
+//     cps = 0;
+//     compteur = 0;
+//     affich_result.textContent = compteur;
+// }
 function AjoutClick1() {
     if (cout_click_1 <= compteur) {
         compteur -= cout_click_1;
@@ -87,7 +86,7 @@ function AjoutClick1() {
         affich_result.textContent = compteur;
         nb_click_1++;
         bt_1.textContent = `Click +1 ( x ${nb_click_1}). Coût du prochain niveau : ${cout_click_1}`
-        total_click.textContent = `Montant Click : ${click}`
+        total_click.textContent = `Click : ${click}`
     }
 
 }
@@ -99,7 +98,7 @@ function AjoutClick10() {
         affich_result.textContent = compteur;
         nb_click_10++;
         bt_10.textContent = `Click +10 ( x ${nb_click_10}). Coût du prochain niveau : ${cout_click_10}`
-        total_click.textContent = `Montant Click : ${click}`
+        total_click.textContent = `Click : ${click}`
 
     }
 
@@ -111,7 +110,7 @@ function AjoutClick10() {
         affich_result.textContent = compteur;
         nb_click_100++;
         bt_100.textContent = `Click +100 ( x ${nb_click_100}). Coût du prochain niveau : ${cout_click_100}`
-        total_click.textContent = `Montant Click : ${click}`
+        total_click.textContent = `Click : ${click}`
 
     }
 }
@@ -123,7 +122,7 @@ function CPS1() {
         nb_cps_1++;
         affich_result.textContent = compteur;
         bt_cps_1.textContent = `CPS +1 ( x ${nb_cps_1}). Coût du prochain niveau : ${cout_cps_1}`
-        total_cps.textContent = `Montant CPS : ${cps}`
+        total_cps.textContent = `Click par seconde : ${cps}`
     }
 }
 function CPS10() {
@@ -134,7 +133,7 @@ function CPS10() {
         affich_result.textContent = compteur;
         nb_cps_10++;
         bt_cps_10.textContent = `CPS +10 ( x ${nb_cps_10}). Coût du prochain niveau : ${cout_cps_10}`
-        total_cps.textContent = `Montant CPS : ${cps}`
+        total_cps.textContent = `Click par seconde : ${cps}`
     }
 }
 function CPS100() {
@@ -145,7 +144,7 @@ function CPS100() {
         affich_result.textContent = compteur;
         nb_cps_100++;
         bt_cps_100.textContent = `CPS +100 ( x ${nb_cps_100}). Coût du prochain niveau : ${cout_cps_100}`
-        total_cps.textContent = `Montant CPS : ${cps}`
+        total_cps.textContent = `Click par seconde : ${cps}`
     }
 }
 function ClickDiv() {
@@ -160,7 +159,6 @@ function ClickDiv() {
     } if (compteur > 999) {
         bt_100.style.display = "flex"
         bt_cps_100.style.display = "flex"
-
     }
     compteur = compteur + click
     affich_result.textContent = compteur;

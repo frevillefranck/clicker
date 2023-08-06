@@ -54,30 +54,61 @@ bt_cps_100.addEventListener("click", () => CPS100())
 affich_result.addEventListener('click', () => ClickDiv())
 
 //FONCTIONS
+
+
 setInterval(function () {
-    if (compteur > 9) {
+    if (cout_click_1 <= compteur) {
         bt_1.style.display = "flex"
+        bt_1.removeAttribute("disabled")
+    } else if (cout_click_1 > compteur) {
+        bt_1.setAttribute("disabled", "disabled")
+    } else {
+        bt_1.removeAttribute("disabled")
+    }
+    if (cout_cps_1 <= compteur) {
         bt_cps_1.style.display = "flex"
-
-    } if (compteur > 99) {
+        bt_cps_1.removeAttribute("disabled")
+    } else if (cout_cps_1 > compteur) {
+        bt_cps_1.setAttribute("disabled", "disabled")
+    } else {
+        bt_cps_1.removeAttribute("disabled")
+    }
+    if (cout_click_10 <= compteur) {
         bt_10.style.display = "flex"
+        bt_10.removeAttribute("disabled")
+    } else if (cout_click_10 > compteur) {
+        bt_10.setAttribute("disabled", "disabled")
+    } else {
+        bt_10.removeAttribute("disabled")
+    }
+    if (cout_cps_10 <= compteur) {
         bt_cps_10.style.display = "flex"
-
-    } if (compteur > 999) {
+        bt_cps_10.removeAttribute("disabled")
+    } else if (cout_cps_10 > compteur) {
+        bt_cps_10.setAttribute("disabled", "disabled")
+    } else {
+        bt_cps_10.removeAttribute("disabled")
+    }
+    if (cout_click_100 <= compteur) {
         bt_100.style.display = "flex"
+        bt_100.removeAttribute("disabled")
+    } else if (cout_click_100 > compteur) {
+        bt_100.setAttribute("disabled", "disabled")
+    } else {
+        bt_100.removeAttribute("disabled")
+    }
+    if (cout_cps_100 <= compteur) {
         bt_cps_100.style.display = "flex"
-
+        bt_cps_100.removeAttribute("disabled")
+    } else if (cout_cps_100 > compteur) {
+        bt_cps_100.setAttribute("disabled", "disabled")
+    } else {
+        bt_cps_100.removeAttribute("disabled")
     }
     affich_result.textContent = compteur;
     compteur = compteur + cps;
 
 }, 1000)
-// function Reset() {
-//     click = 0;
-//     cps = 0;
-//     compteur = 0;
-//     affich_result.textContent = compteur;
-// }
 function AjoutClick1() {
     if (cout_click_1 <= compteur) {
         compteur -= cout_click_1;
@@ -127,7 +158,7 @@ function CPS1() {
 }
 function CPS10() {
     if (cout_cps_10 <= compteur) {
-        compteur -= cout_click_10
+        compteur -= cout_cps_10
         cout_cps_10 += 100;
         cps += 10
         affich_result.textContent = compteur;
@@ -138,7 +169,7 @@ function CPS10() {
 }
 function CPS100() {
     if (cout_cps_100 <= compteur) {
-        compteur -= cout_click_100
+        compteur -= cout_cps_100
         cout_cps_100 += 1000;
         cps += 100
         affich_result.textContent = compteur;
@@ -148,21 +179,29 @@ function CPS100() {
     }
 }
 function ClickDiv() {
-    if (compteur > 9) {
+
+    if (cout_click_1 <= compteur) {
         bt_1.style.display = "flex"
+    }
+    if (cout_cps_1 <= compteur) {
         bt_cps_1.style.display = "flex"
-
-    } if (compteur > 99) {
+    }
+    if (cout_click_10 <= compteur) {
         bt_10.style.display = "flex"
+    }
+    if (cout_cps_10 <= compteur) {
         bt_cps_10.style.display = "flex"
-
-    } if (compteur > 999) {
+    }
+    if (cout_click_100 <= compteur) {
         bt_100.style.display = "flex"
+    }
+    if (cout_cps_100 <= compteur) {
         bt_cps_100.style.display = "flex"
     }
-    compteur = compteur + click
+    compteur = compteur + click;
     affich_result.textContent = compteur;
 }
+
 
 
 
